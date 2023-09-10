@@ -68,6 +68,9 @@ void agregarNodo(struct nodo *ultimoNodo, int indice, int datoNodo)
             longitud++;
         }
         nodoActual->ant = nodoPrevio;
+        nodoActual->sig = nuevoNodo;
+        nuevoNodo->dato = datoNodo;
+        nuevoNodo->sig = NULL;
         return;
     }
     else if (indice == 0)
